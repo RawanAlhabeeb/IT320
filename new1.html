@@ -1,0 +1,62 @@
+<!doctype html >  
+<html>
+<head>
+<title>Restaurant</title>
+<link rel="stylesheet" href="neww1.css">
+<title>form</title>
+        <script type="text/javascript" src=".js"></script>
+</head>
+<body >
+<header>
+<h2> Restaurant</h2>
+</header>
+<main>
+ <form >
+<p>Pizza</p>
+<input type="checkbox" id="0" name="Pepperoni" value="10">Pepperoni -10</input><br>
+<input type="checkbox" id="1" name="Marghertia" value="9">Marghertia -9</input><br>
+<input type="checkbox" id="2" name="Vegetable" value="8">Vegetable -8</input><br>
+<br>
+<p>Drink</p>
+ <input type="checkbox" id="3" name="Soda" value="2">Soda -2</input><br>
+<input type="checkbox" id="4" name="juice" value="3">Juice -3</input><br>
+<input type="checkbox" id="5" name="None" value="0">None</input><br>
+
+
+</form>
+<input type="submit" onclick="UpdateCost()" id="totalcost" value="Submit">
+<br>
+
+
+<p id="total" value="0"><p id="tt"></p></p>
+<script type="text/javascript">
+function UpdateCost() {
+  var sum = 0;
+  var fid, elem;
+  for (i=0; i<6; i++) {
+    fid = i;
+    elem = document.getElementById(fid);
+    if (elem.checked == true) { sum += Number(elem.value); }
+  }
+  document.getElementById('totalcost').value = sum;
+ 
+ document.getElementById('tt').innerHTML = "Total Price ="+totalcost.value;
+  
+  return false
+} 
+</script>
+</main>
+
+
+
+</body>
+</html> 
+  
+  
+  
+  
+  
+  
+  
+  
+  
